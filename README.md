@@ -1,12 +1,5 @@
-package cn.gx.hj.hstate;
-
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.Toast;
-
-import cn.gx.hj.lib.HState;
-import cn.gx.hj.lib.HStateCallback;
-import cn.gx.hj.lib.HStatus;
+Example code
+```java
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,3 +44,4 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 }
+```

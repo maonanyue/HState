@@ -17,7 +17,7 @@ public class HState<Data> {
     }
 
 
-    public <T extends HState> T copy(HState src){
+    public <T extends HState<Data>> T copy(HState src){
         if(src != null) {
             status = src.status;
             code = src.code;
@@ -30,7 +30,7 @@ public class HState<Data> {
         return getThis();
     }
 
-    protected <T extends HState> T getThis(){
+    protected <T extends HState<Data>> T getThis(){
         return (T) this;
     }
 
@@ -40,7 +40,7 @@ public class HState<Data> {
         return status;
     }
 
-    public <T extends HState> T status(@HStatus int status){
+    public <T extends HState<Data>> T status(@HStatus int status){
         this.status = status;
         return getThis();
     }
@@ -49,7 +49,7 @@ public class HState<Data> {
         return code;
     }
 
-    public <T extends HState> T code(int code){
+    public <T extends HState<Data>> T code(int code){
         this.code = code;
         return getThis();
     }
@@ -59,7 +59,7 @@ public class HState<Data> {
         return total;
     }
 
-    public <T extends HState> T total(long total){
+    public <T extends HState<Data>> T total(long total){
         this.total = total;
         return getThis();
     }
@@ -68,7 +68,7 @@ public class HState<Data> {
         return current;
     }
 
-    public <T extends HState> T current(long current){
+    public <T extends HState<Data>> T current(long current){
         this.current = current;
         return getThis();
     }
@@ -77,7 +77,7 @@ public class HState<Data> {
         return message;
     }
 
-    public <T extends HState> T message(String message){
+    public <T extends HState<Data>> T message(String message){
         this.message = message;
         return getThis();
     }
@@ -86,7 +86,7 @@ public class HState<Data> {
         return detail;
     }
 
-    public <T extends HState> T detail(String detail){
+    public <T extends HState<Data>> T detail(String detail){
         this.detail = detail;
         return getThis();
     }
@@ -95,7 +95,7 @@ public class HState<Data> {
         return throwable;
     }
 
-    public <T extends HState> T throwable(Throwable throwable){
+    public <T extends HState<Data>> T throwable(Throwable throwable){
         this.throwable = throwable;
         return getThis();
     }
@@ -104,26 +104,26 @@ public class HState<Data> {
         return data;
     }
 
-    public <T extends HState> T data(Data data){
+    public <T extends HState<Data>> T data(Data data){
         this.data = data;
         return getThis();
     }
 
-    public <T extends HState> T finish(int errorCode){
+    public <T extends HState<Data>> T finish(int errorCode){
         code(errorCode);
         return status(HStatus.FINISHED);
     }
 
-    public <T extends HState> T finish(int errorCode, Throwable throwable){
+    public <T extends HState<Data>> T finish(int errorCode, Throwable throwable){
         code(errorCode).throwable(throwable);
         return status(HStatus.FINISHED);
     }
 
-    public <T extends HState> T finish(){
+    public <T extends HState<Data>> T finish(){
         return status(HStatus.FINISHED);
     }
 
-    public <T extends HState> T finish(Data data){
+    public <T extends HState<Data>> T finish(Data data){
         data(data);
         return status(HStatus.FINISHED);
     }
