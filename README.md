@@ -1,3 +1,5 @@
+Define a general java state callback.
+
 Example code
 ```java
 
