@@ -16,7 +16,7 @@ ext {
     siteUrl = 'https://github.com/maonanyue/HState'
     gitUrl = 'https://github.com/maonanyue/HState.git'
 
-    libraryVersion = '1.0.1'
+    libraryVersion = '1.0.2'
 
     developerId = 'weizongshang'
     developerName = 'Wei ZongShang'
