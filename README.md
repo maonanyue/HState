@@ -1,5 +1,12 @@
 Define a general java state callback.
 
+
+gradle 
+```groovy
+implementation 'cn.gx.hj:h-state:1.0.2'
+
+```
+
 Example code
 ```java
 
