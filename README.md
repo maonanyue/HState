@@ -1,7 +1,7 @@
-Define a general java state callback.
+Define a general android state callback.
 
 
-gradle 
+gradle
 ```groovy
 implementation 'cn.gx.hj:h-state:1.0.2'
 
